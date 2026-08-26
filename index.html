@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>GUGGY | Solana Meme Coin</title>
+
+  <meta name="description" content="Official website for $GUGGY on Solana.">
+  <meta name="theme-color" content="#07070c">
 
   <style>
     * {
@@ -12,11 +16,15 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 20% 20%, rgba(0,255,200,.15), transparent 30%),
-        radial-gradient(circle at 80% 30%, rgba(160,0,255,.18), transparent 30%),
+        radial-gradient(circle at 15% 20%, rgba(0,255,200,.14), transparent 30%),
+        radial-gradient(circle at 85% 25%, rgba(150,50,255,.18), transparent 30%),
         #050509;
       color: white;
       min-height: 100vh;
@@ -26,14 +34,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 7%;
+      padding: 18px 7%;
       border-bottom: 1px solid rgba(255,255,255,.08);
-      background: rgba(5,5,9,.8);
+      background: rgba(5,5,9,.88);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .brand {
       font-size: 26px;
       font-weight: 900;
+      letter-spacing: 1px;
     }
 
     .brand span {
@@ -42,7 +55,8 @@
 
     .navlinks {
       display: flex;
-      gap: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -54,6 +68,7 @@
       color: white;
       background: #15151f;
       border: 1px solid rgba(255,255,255,.12);
+      cursor: pointer;
       transition: .2s;
     }
 
@@ -66,10 +81,11 @@
       background: linear-gradient(90deg, #26e6b8, #8d42ff);
       color: #050509;
       border: none;
+      box-shadow: 0 0 25px rgba(53,240,192,.18);
     }
 
     .hero {
-      min-height: 78vh;
+      min-height: 80vh;
       display: grid;
       place-items: center;
       text-align: center;
@@ -77,7 +93,8 @@
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
+      width: 100%;
     }
 
     .logo {
@@ -101,6 +118,7 @@
 
       background: linear-gradient(90deg, #ffffff, #35f0c0, #9b54ff);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
 
@@ -116,7 +134,7 @@
       font-size: 19px;
       line-height: 1.6;
       color: #b8b8c8;
-      max-width: 650px;
+      max-width: 680px;
       margin: auto;
     }
 
@@ -163,13 +181,49 @@
       line-height: 1.6;
     }
 
-    .ca {
+    .contract-box {
       margin-top: 45px;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
+      border-radius: 18px;
+      border: 1px solid rgba(53,240,192,.35);
+      background: rgba(53,240,192,.03);
+    }
+
+    .contract-box h3 {
+      color: #35f0c0;
+      margin-bottom: 14px;
+    }
+
+    .ca {
+      font-family: monospace;
+      font-size: 15px;
+      overflow-wrap: anywhere;
+      color: #ddd;
+      padding: 14px;
+      border-radius: 12px;
+      background: #0d0d14;
+      margin-bottom: 15px;
+    }
+
+    .copy-message {
+      color: #35f0c0;
+      margin-top: 10px;
+      min-height: 20px;
+      font-size: 14px;
+    }
+
+    .warning {
+      max-width: 850px;
+      margin: 0 auto 70px;
+      padding: 20px;
       border-radius: 15px;
-      border: 1px dashed rgba(53,240,192,.45);
-      color: #9999aa;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      color: #8e8e9f;
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.6;
     }
 
     footer {
@@ -191,6 +245,10 @@
       h1 {
         letter-spacing: -2px;
       }
+
+      nav {
+        padding: 15px 5%;
+      }
     }
   </style>
 </head>
@@ -201,11 +259,31 @@
   <div class="brand">GUGGY<span>.</span></div>
 
   <div class="navlinks">
-    <a class="btn" href="https://x.com/GUGGYSOL" target="_blank">𝕏 Twitter</a>
 
-    <a class="btn telegram" href="https://t.me/guggysol" target="_blank">
+    <a
+      class="btn"
+      href="https://x.com/GUGGYSOL"
+      target="_blank"
+      rel="noopener noreferrer">
+      𝕏 X
+    </a>
+
+    <a
+      class="btn telegram"
+      href="https://t.me/guggysol"
+      target="_blank"
+      rel="noopener noreferrer">
       Telegram
     </a>
+
+    <a
+      class="btn primary"
+      href="https://pump.fun/coin/69QXqbwCbXJZNwxBF3istzstApxtvJXXMjoEJzKkpump"
+      target="_blank"
+      rel="noopener noreferrer">
+      Buy $GUGGY
+    </a>
+
   </div>
 </nav>
 
@@ -229,17 +307,29 @@
 
     <div class="buttons">
 
-      <a class="btn primary" href="https://t.me/guggysol" target="_blank">
+      <a
+        class="btn primary"
+        href="https://pump.fun/coin/69QXqbwCbXJZNwxBF3istzstApxtvJXXMjoEJzKkpump"
+        target="_blank"
+        rel="noopener noreferrer">
+        🚀 Buy $GUGGY
+      </a>
+
+      <a
+        class="btn"
+        href="https://t.me/guggysol"
+        target="_blank"
+        rel="noopener noreferrer">
         Join Telegram
       </a>
 
-      <a class="btn" href="https://x.com/GUGGYSOL" target="_blank">
+      <a
+        class="btn"
+        href="https://x.com/GUGGYSOL"
+        target="_blank"
+        rel="noopener noreferrer">
         Follow on X
       </a>
-
-      <span class="btn">
-        🚀 Launching Soon
-      </span>
 
     </div>
 
@@ -257,37 +347,73 @@
     <div class="card">
       <h3>🐾 Community</h3>
       <p>
-        Built around memes, community and the GUGGY mascot.
+        Built around the GUGGY community, memes and one fearless cat.
       </p>
     </div>
 
     <div class="card">
       <h3>⚡ Solana</h3>
       <p>
-        Fast, simple and built on the Solana ecosystem.
+        GUGGY lives on the Solana ecosystem.
       </p>
     </div>
 
     <div class="card">
       <h3>😼 Meme Energy</h3>
       <p>
-        No boring roadmap. Just GUGGY, memes and chaos.
+        Playful. Fearless. Legendary. GUGGY brings pure meme energy.
       </p>
     </div>
 
   </div>
 
-  <div class="ca">
-    Official Contract Address:
-    <strong>69QXqbwCbXJZNwxBF3istzstApxtvJXXMjoEJzKkpump</strong>
+
+  <div class="contract-box">
+
+    <h3>Official Contract Address</h3>
+
+    <div class="ca" id="contract">
+      69QXqbwCbXJZNwxBF3istzstApxtvJXXMjoEJzKkpump
+    </div>
+
+    <button class="btn" onclick="copyCA()">
+      📋 Copy Contract Address
+    </button>
+
+    <div class="copy-message" id="copyMessage"></div>
+
   </div>
 
 </section>
 
 
+<div class="warning">
+  ⚠️ Always verify the official contract address before trading.
+  Never share your seed phrase or private keys.
+  Meme coins are highly volatile and involve significant risk.
+</div>
+
+
 <footer>
-  © 2026 GUGGY • Official links only • Never share your seed phrase.
+  © 2026 GUGGY • Official links only 🐾
 </footer>
+
+
+<script>
+  function copyCA() {
+    const ca =
+      "69QXqbwCbXJZNwxBF3istzstApxtvJXXMjoEJzKkpump";
+
+    navigator.clipboard.writeText(ca);
+
+    const message = document.getElementById("copyMessage");
+    message.textContent = "✓ Contract address copied!";
+
+    setTimeout(() => {
+      message.textContent = "";
+    }, 2500);
+  }
+</script>
 
 </body>
 </html>
